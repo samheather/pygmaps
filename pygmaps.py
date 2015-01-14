@@ -4,6 +4,23 @@ import math
 ## 
 ############################################################
 
+
+#                 .___.
+#                /     \
+#               | O _ O |
+#               /  \_/  \ 
+#             .' /     \ `.
+#            / _|       |_ \
+#           (_/ |       | \_)
+#               \       /
+#              __\_>-<_/__
+#              ~;/     \;~
+#
+#                 !! IMPORTANT IMPORTANT IMPORTANT !!
+# UNDER PYGMAPS LICENCE, ALL MODIFICATIONS TO THIS FILE MUST BE REPUBLISHED
+# NOT DOING SO IS A BREACH OF THE LICENCE - DO NOT FORGET!
+
+
 class maps:
 
 	def __init__(self, centerLat, centerLng, zoom ):
@@ -37,7 +54,7 @@ class maps:
 		f = open(htmlfile,'w')
 		f.write('<html>\n')
 		f.write('<head>\n')
-		f.write('<link rel="stylesheet" href="style.css">\n')
+# 		f.write('<link rel="stylesheet" href="style.css">\n')
 		f.write('<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />\n')
 		f.write('<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>\n')
 		f.write('<title>Google Maps - pygmaps </title>\n')
@@ -51,6 +68,29 @@ class maps:
 		self.drawpaths(f,self.paths)
 		f.write('\t}\n')
 		f.write('</script>\n')
+		
+		f.write('<style>')
+		
+		cssF = open('mapStyle.css','r')
+		for line in cssF:
+			f.write(line)
+		
+# 		f.write('#top_bar {')
+# 		f.write('	width: 100%;')
+# 		f.write('	height: 15%;')
+# 		f.write('}')
+# 
+# #map_canvas {
+# 	width: 100%;
+# 	height: 70%;
+# }
+# 
+# #bottom_bar {
+# 	width: 100%;
+# 	height: 15%;
+# }
+		f.write('</style>')
+		
 		f.write('</head>\n')
 		f.write('<body style="margin:0px; padding:0px;" onload="initialize()">\n')
 		f.write('\t<div id="top_bar">')
