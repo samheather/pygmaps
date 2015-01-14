@@ -1,5 +1,6 @@
 pygmaps.py
 readme.txt
+setup.cfg
 setup.py
 pygmaps.egg-info/PKG-INFO
 pygmaps.egg-info/SOURCES.txt
