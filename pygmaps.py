@@ -72,7 +72,7 @@ class maps:
 
 		# This reads the mapStyle.css from the pwserver directory, NOT pygmaps
 		# directory.  I.e. css needs to be local to where been executed from.
-		cssF = open('mapStyle.css','r')
+		cssF = open('./mapStuff/mapStyle.css','r')
 		for line in cssF:
 			f.write(line)
 		f.write('</style>')
