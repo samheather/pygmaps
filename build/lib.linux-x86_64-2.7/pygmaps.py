@@ -56,7 +56,7 @@ class maps:
 		f.write('<head>\n')
 		f.write('<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />\n')
 		f.write('<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>\n')
-		f.write('<title>Google Maps - pygmaps </title>\n')
+		f.write('<title>pingWHEN Maps</title>\n')
 		f.write('<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>\n')
 		f.write('<script type="text/javascript">\n')
 		f.write('\tfunction initialize() {\n')
@@ -72,20 +72,20 @@ class maps:
 
 		# This reads the mapStyle.css from the pwserver directory, NOT pygmaps
 		# directory.  I.e. css needs to be local to where been executed from.
-		cssF = open('mapStyle.css','r')
+		cssF = open('./mapStuff/mapStyle.css','r')
 		for line in cssF:
 			f.write(line)
 		f.write('</style>')
 		
 		f.write('</head>\n')
 		f.write('<body style="margin:0px; padding:0px;" onload="initialize()">\n')
-		f.write('\t<div class="top_bar">')
+		f.write('\t<div class="bar"><p>')
 		f.write(htmlForInsideTopDiv)
-		f.write('</div>\n')
+		f.write('</p></div>\n')
 		f.write('\t<div id="map_canvas" class="map_canvas"></div>\n')
-		f.write('\t<div class="bottom_bar">')
+		f.write('\t<div class="bar"><p>')
 		f.write(htmlForInsideBottomDiv)
-		f.write('</div>\n')
+		f.write('</p></div>\n')
 		f.write('</body>\n')
 		f.write('</html>\n')		
 		f.close()
